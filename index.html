@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Online Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Art<span> in the</span> Heart</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#cart" class="cart-link">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Discover Unique Art</h1>
+            <p>Immerse yourself in the world of creativity and own one-of-a-kind pieces.</p>
+            <div class="hero-buttons">
+                <button onclick="scrollToGallery()">Explore Gallery</button>
+                <button onclick="learnMore()">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Featured Art Section -->
+    <section id="featured-art">
+        <h2>Featured Creations</h2>
+        <div class="art-grid">
+            <div class="art-item">
+                <img src="images/art1.jpg" alt="Art 1">
+                <div class="art-info">
+                    <h3>Sunset Serenity</h3>
+                    <p>$120</p>
+                    <button onclick="addToCart('Sunset Serenity')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/images/art2.jpg" alt="Art 2">
+                <div class="art-info">
+                    <h3>Abstract Waves</h3>
+                    <p>$150</p>
+                    <button onclick="addToCart('Abstract Waves')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/images/art3.jpg" alt="Art 3">
+                <div class="art-info">
+                    <h3>Forest Glow</h3>
+                    <p>$200</p>
+                    <button onclick="addToCart('Forest Glow')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/images/art4.jpg" alt="Art 4">
+                <div class="art-info">
+                    <h3>Forest Glow</h3>
+                    <p>$200</p>
+                    <button onclick="addToCart('Forest Glow')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Artist Section -->
+    <section id="about-artist">
+        <div class="about-container">
+            <div class="artist-image">
+                <img src="/images/artist.jpg" alt="Artist Photo">
+            </div>
+            <div class="artist-info">
+                <h2>About the Artist</h2>
+                <p>
+                    Hello! I'm Snehal Rekhate, a passionate creator who brings imagination to life through vibrant and captivating art. 
+                    With over 5 years of experience, my work explores themes of nature, emotion, and abstraction.
+                </p>
+                <ul class="achievements">
+                    <li>🏆 Featured in 10+ international exhibitions</li>
+                    <li>🎨 Over 200 original pieces created</li>
+                    <li>💼 Collaborated with top designers and brands</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonial-carousel">
+            <!-- <div class="testimonial-item">
+                <p>"This artist's work completely transformed our office! Highly recommend."</p>
+                <h4>- Sarah J., Interior Designer</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"A true masterpiece! The colors and emotion in each piece are incredible."</p>
+                <h4>- Mike R., Art Collector</h4>
+            </div> -->
+            <div class="testimonial-item">
+                <p>"Absolutely stunning art. Each piece tells a beautiful story!"</p>
+                <h4>- Emily K., Gallery Owner</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"प्रत्येक चित्रात एक नवीन अनुभव आणि रंगसंगती, पोत दिसून येतो. सगळीचं चित्र आनंद व डोळ्याला शांतता देणारी आणि मनाला मोहणारी आहेत. धन्यवाद..."</p>
+                <h4>- Prasad Rajopadhye</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Amazing and a treasure to behold! Such great stories behind the stills made it so alive."</p>
+                <h4>- P. Malhotra</h4>
+            </div>
+            <!-- <div class="testimonial-item">
+                <p>"Very commendable! Would like to see more and more of Art!"</p>
+                <h4>-- Malti Kelkar</h4>
+            </div> -->
+        </div>
+        <div class="carousel-controls">
+            <button id="prev" onclick="changeTestimonial(-1)">&#10094;</button>
+            <button id="next" onclick="changeTestimonial(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section id="gallery-preview">
+        <h2>Browse by Categories</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <img src="/images/paintings.jpg" alt="Paintings">
+                <div class="category-info">
+                    <h3>Paintings</h3>
+                    <p>Explore a diverse collection of beautiful paintings.</p>
+                </div>
+            </div>
+            <div class="category-item">
+                <img src="/images/digital-art.jpg" alt="Sketches">
+                <div class="category-info">
+                    <h3>Sketches</h3>
+                    <p>Delve into detailed and artistic sketches.</p>
+                </div>
+            </div>
+            <div class="category-item">
+                <img src="/images/sketches.jpg" alt="Digital Art">
+                <div class="category-info">
+                    <h3>Digital Art</h3>
+                    <p>Discover modern digital art creations.</p>
+                </div>
+            </div>
+        </div>
+        <a href="gallery.html" class="view-all-button">View All</a>
+    </section>
+
+
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter">
+        <div class="newsletter-container">
+            <h2>Stay Updated</h2>
+            <p>Sign up for our newsletter and be the first to know about exclusive discounts, early access to new collections, and more!</p>
+            <form id="newsletter-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="mobile" placeholder="Your Mobile Number" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+            <p class="offer">Sign up now and enjoy 10% off your first order!</p>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact-info">
+                <h3>Contact Info</h3>
+                <p>Email: <a href="mailto:info@yourbrand.com">info@yourbrand.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Address: 123 Art Street, City, Country</p>
+            </div>
+            
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/art_in_the_heart_26/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@art_in_the_heart_26" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 Art in the Heart. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
